@@ -6,33 +6,33 @@ let users = [
 ];
 
 // Carrega os usuários ao abrir a página
-document.addEventListener('DOMContentLoaded', function() {
+document.addEventListener('DOMContentLoaded', function () {
     renderUsersByRole();
-    
+
     // Verifica se o usuário está logado
     if (localStorage.getItem('loggedIn') !== 'true') {
         window.location.href = 'index.html';
     }
-    
+
     // Evento para abrir o modal de adicionar usuário
-    document.getElementById('add-user-btn').addEventListener('click', function() {
+    document.getElementById('add-user-btn').addEventListener('click', function () {
         document.getElementById('form-modal-title').textContent = 'Adicionar Novo Usuário';
         document.getElementById('user-form').reset();
         document.getElementById('user-id').value = '';
         document.getElementById('user-form-modal').classList.remove('hidden');
     });
-    
+
     // Evento para fechar o modal de formulário
-    document.getElementById('close-form-modal').addEventListener('click', function() {
+    document.getElementById('close-form-modal').addEventListener('click', function () {
         document.getElementById('user-form-modal').classList.add('hidden');
     });
-    
-    document.getElementById('cancel-form').addEventListener('click', function() {
+
+    document.getElementById('cancel-form').addEventListener('click', function () {
         document.getElementById('user-form-modal').classList.add('hidden');
     });
-    
+
     // Evento para submeter o formulário
-    document.getElementById('user-form').addEventListener('submit', function(e) {
+    document.getElementById('user-form').addEventListener('submit', function (e) {
         e.preventDefault();
         saveUser();
     });
@@ -42,23 +42,23 @@ document.addEventListener('DOMContentLoaded', function() {
 function renderUsersByRole() {
     const container = document.getElementById('users-by-role');
     container.innerHTML = '';
-    
+
     // Agrupa usuários por função
     const roles = [...new Set(users.map(user => user.role))];
-    
+
     roles.forEach(role => {
         const roleUsers = users.filter(user => user.role === role);
-        
+
         const roleSection = document.createElement('div');
         roleSection.className = 'role-section';
-        
+
         const roleTitle = document.createElement('div');
         roleTitle.className = 'role-title';
-        roleTitle.textContent = role === 'Administrador' ? 'Administradores' : 
-        role === 'Professor' ? 'Professores' : 
-        role === 'Aluno' ? 'Alunos' : 
-        role + 's';
-        
+        roleTitle.textContent = role === 'Administrador' ? 'Administradores' :
+            role === 'Professor' ? 'Professores' :
+                role === 'Aluno' ? 'Alunos' :
+                    role + 's';
+
         const table = document.createElement('div');
         table.className = 'responsive-table';
         table.innerHTML = `
@@ -100,12 +100,12 @@ function renderUsersByRole() {
                 </tbody>
             </table>
         `;
-        
+
         roleSection.appendChild(roleTitle);
         roleSection.appendChild(table);
         container.appendChild(roleSection);
     });
-    
+
     // Adiciona eventos aos botões
     addUserEventListeners();
 }
@@ -113,21 +113,21 @@ function renderUsersByRole() {
 // Adiciona eventos aos botões de ação
 function addUserEventListeners() {
     document.querySelectorAll('.view-user').forEach(button => {
-        button.addEventListener('click', function() {
+        button.addEventListener('click', function () {
             const userId = parseInt(this.dataset.id);
             showUserDetails(userId);
         });
     });
 
     document.querySelectorAll('.edit-user').forEach(button => {
-        button.addEventListener('click', function() {
+        button.addEventListener('click', function () {
             const userId = parseInt(this.dataset.id);
             editUser(userId);
         });
     });
 
     document.querySelectorAll('.delete-user').forEach(button => {
-        button.addEventListener('click', function() {
+        button.addEventListener('click', function () {
             const userId = parseInt(this.dataset.id);
             deleteUser(userId);
         });
@@ -163,7 +163,7 @@ function showUserDetails(userId) {
 }
 
 // Fecha o modal de detalhes
-document.getElementById('close-user-modal').addEventListener('click', function() {
+document.getElementById('close-user-modal').addEventListener('click', function () {
     document.getElementById('user-details-modal').classList.add('hidden');
 });
 
@@ -178,7 +178,7 @@ function editUser(userId) {
     document.getElementById('email').value = user.email;
     document.getElementById('password').value = user.password;
     document.getElementById('role').value = user.role;
-    
+
     document.getElementById('user-form-modal').classList.remove('hidden');
 }
 
@@ -189,7 +189,7 @@ function saveUser() {
     const email = document.getElementById('email').value;
     const password = document.getElementById('password').value;
     const role = document.getElementById('role').value;
-    
+
     if (userId) {
         // Editar usuário existente
         const index = users.findIndex(u => u.id == userId);
@@ -212,9 +212,9 @@ function saveUser() {
             password,
             role,
             lastLogin: new Date().toISOString().split('T')[0]
-        }); 
+        });
     }
-    
+
     document.getElementById('user-form-modal').classList.add('hidden');
     renderUsersByRole();
 }
@@ -228,7 +228,7 @@ function deleteUser(userId) {
 }
 
 // Sistema de Logout
-document.getElementById('logout-btn').addEventListener('click', function() {
+document.getElementById('logout-btn').addEventListener('click', function () {
     localStorage.removeItem('loggedIn');
     localStorage.removeItem('user');
     window.location.href = 'index.html';

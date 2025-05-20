@@ -29,7 +29,9 @@ body {
     min-height: 100vh;
 }
 
-button, input, textarea {
+button,
+input,
+textarea {
     font-family: inherit;
     font-size: inherit;
 }
@@ -557,7 +559,9 @@ html {
 }
 
 @keyframes spin {
-    to { transform: rotate(360deg); }
+    to {
+        transform: rotate(360deg);
+    }
 }
 
 /* Modal de Configurações */
@@ -638,31 +642,31 @@ html {
         padding: 0.75rem;
         padding-bottom: 5rem;
     }
-    
+
     .note-editor,
     .suggestions-container {
         padding: 1rem;
     }
-    
+
     .editor-actions {
         flex-direction: column;
         gap: 0.5rem;
     }
-    
+
     .save-button,
     .analyze-button {
         width: 100%;
     }
-    
+
     .notes-sidebar {
         width: 85%;
     }
-    
+
     .note-card-header {
         flex-direction: column;
         gap: 0.5rem;
     }
-    
+
     .note-card-actions {
         width: 100%;
         justify-content: space-between;
@@ -673,32 +677,34 @@ html {
     .login-container {
         padding: 1rem;
     }
-    
+
     .settings-content {
         padding: 1rem;
     }
-    
+
     .mobile-footer {
         padding: 0.5rem 0;
     }
-    
+
     .footer-button {
         font-size: 1rem;
         padding: 0.25rem;
     }
-    
+
     .note-editor h2,
     .previous-notes h2 {
         font-size: 1rem;
     }
-    
+
     #note-content {
         min-height: 10rem;
     }
 }
 
 /* Melhora a experiência de toque */
-button, input[type="submit"], input[type="button"] {
+button,
+input[type="submit"],
+input[type="button"] {
     -webkit-tap-highlight-color: transparent;
     touch-action: manipulation;
 }
@@ -713,7 +719,7 @@ button, input[type="submit"], input[type="button"] {
         align-items: center;
         justify-content: center;
     }
-    
+
     .delete-note {
         padding: 0.5rem;
     }
@@ -721,7 +727,9 @@ button, input[type="submit"], input[type="button"] {
 
 /* Evita zoom em inputs em iOS */
 @media screen and (max-width: 767px) {
-    input, select, textarea {
+    input,
+    select,
+    textarea {
         font-size: 16px;
     }
 }

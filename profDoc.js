@@ -26,7 +26,7 @@ let notes = [
 ];
 
 // Verifica se o usuário está logado ao carregar a página
-document.addEventListener('DOMContentLoaded', function() {
+document.addEventListener('DOMContentLoaded', function () {
     if (localStorage.getItem('loggedIn') === 'true') {
         document.getElementById('login-screen').classList.add('hidden');
         document.getElementById('app').classList.remove('hidden');
@@ -34,14 +34,14 @@ document.addEventListener('DOMContentLoaded', function() {
     }
 });
 
-        // Sistema de Logout
-            document.getElementById('logout-btn').addEventListener('click', function() {
-                localStorage.removeItem('loggedIn');
-                localStorage.removeItem('user');
-                document.getElementById('app').classList.add('hidden');
-                document.getElementById('login-screen').classList.remove('hidden');
-                document.getElementById('login-form').reset();
-            });
+// Sistema de Logout
+document.getElementById('logout-btn').addEventListener('click', function () {
+    localStorage.removeItem('loggedIn');
+    localStorage.removeItem('user');
+    document.getElementById('app').classList.add('hidden');
+    document.getElementById('login-screen').classList.remove('hidden');
+    document.getElementById('login-form').reset();
+});
 
-            
+
 // ... (restante do JavaScript permanece igual)
