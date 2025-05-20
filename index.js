@@ -1,7 +1,8 @@
          // Dados de usuário (simulando um banco de dados)
          const users = [
             { email: "medico@exemplo.com", password: "senha123", name: "Dr. Silva", role: "user" },
-            { email: "admin@exemplo.com", password: "admin123", name: "Administrador", role: "admin" }
+            { email: "admin@exemplo.com", password: "admin123", name: "Administrador", role: "admin" },
+            { email: "professor@exemplo.com", password: "senha123", name: "Prof. Oliveira", role: "teacher" }
         ];
         
         // Verifica se o usuário está logado ao carregar a página
@@ -9,17 +10,19 @@
             if (localStorage.getItem('loggedIn') === 'true') {
                 const user = JSON.parse(localStorage.getItem('user'));
                 
-                // Se for admin, redireciona para config.html
-                if (user.role === "admin") {
-                    window.location.href = "configADM.html";
-                } else {
-                    // Usuário normal, mostra o app
-                    document.getElementById('login-screen').classList.add('hidden');
-                    document.getElementById('app').classList.remove('hidden');
-                    loadNotes();
-                }
+                // Redireciona conforme o tipo de usuário
+            if (user.role === "admin") {
+                window.location.href = "configADM.html";
+            } else if (user.role === "teacher") {
+                window.location.href = "teacher.html"; // Página do professor
+            } else {
+                // Usuário normal, mostra o app
+                document.getElementById('login-screen').classList.add('hidden');
+                document.getElementById('app').classList.remove('hidden');
+                loadNotes();
             }
-        });
+        }
+    });
         
         // Sistema de Login
         document.getElementById('login-form').addEventListener('submit', function(e) {
@@ -39,13 +42,15 @@
                 // Verifica o tipo de usuário
                 if (user.role === "admin") {
                     window.location.href = "configADM.html";
+                } else if (user.role === "teacher") {
+                    window.location.href = "profDoc.html"; // Página do professor
                 } else {
                     document.getElementById('login-screen').classList.add('hidden');
                     document.getElementById('app').classList.remove('hidden');
                     loadNotes();
                 }
             } else {
-                alert('E-mail ou senha incorretos. Use: medico@exemplo.com / senha123 ou admin@exemplo.com / admin123');
+                alert('E-mail ou senha incorretos. Use: medico@exemplo.com / senha123, admin@exemplo.com / admin123 ou professor@exemplo.com / senha123');
             }
         });
             
