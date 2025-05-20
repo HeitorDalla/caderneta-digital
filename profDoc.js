@@ -34,4 +34,14 @@ document.addEventListener('DOMContentLoaded', function() {
     }
 });
 
+        // Sistema de Logout
+            document.getElementById('logout-btn').addEventListener('click', function() {
+                localStorage.removeItem('loggedIn');
+                localStorage.removeItem('user');
+                document.getElementById('app').classList.add('hidden');
+                document.getElementById('login-screen').classList.remove('hidden');
+                document.getElementById('login-form').reset();
+            });
+
+            
 // ... (restante do JavaScript permanece igual)
