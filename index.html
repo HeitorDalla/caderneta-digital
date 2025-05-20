@@ -1,48 +1,12 @@
 <!DOCTYPE html>
-<html lang="pt-BR">
+<html lang="pt-br">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>MedNotes - Caderneta Digital</title>
     <script src="https://cdn.tailwindcss.com"></script>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
-    <style>
-        .note-card {
-            transition: all 0.2s ease;
-            border-left: 4px solid #3b82f6;
-        }
-        .note-card:hover {
-            transform: translateY(-2px);
-            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.05);
-        }
-        .animate-spin {
-            animation: spin 1s linear infinite;
-        }
-        @keyframes spin {
-            from { transform: rotate(0deg); }
-            to { transform: rotate(360deg); }
-        }
-        #note-content {
-            min-height: 200px;
-            resize: vertical;
-        }
-        #notes-sidebar {
-            transform: translateX(-100%);
-            transition: transform 0.3s ease;
-        }
-        #notes-sidebar.active {
-            transform: translateX(0);
-        }
-        .sidebar-overlay {
-            opacity: 0;
-            visibility: hidden;
-            transition: opacity 0.3s ease;
-        }
-        .sidebar-overlay.active {
-            opacity: 1;
-            visibility: visible;
-        }
-    </style>
+    <link rel="stylesheet" href="index.css">
 </head>
 <body class="bg-gray-50 min-h-screen">
     <!-- Tela de Login -->
@@ -165,7 +129,7 @@
         </div>
     </div>
 
-    <!-- Modal de Configurações -->
+<!-- Modal de Configurações -->
 <div id="settings-modal" class="hidden fixed inset-0 bg-black bg-opacity-50 z-50 flex items-center justify-center p-4">
     <div class="bg-white rounded-xl p-6 w-full max-w-md">
         <div class="flex justify-between items-center mb-4">
