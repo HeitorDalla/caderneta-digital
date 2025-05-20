@@ -27,6 +27,12 @@ Isso permite um acompanhamento eficiente e uma análise criteriosa da qualidade 
 - Credenciais padrão para testes:
   - **E-mail:** medico@exemplo.com  
   - **Senha:** senha123
+- Credenciais padrão para acesso de ADMIN:
+  - **E-mail:** admin@exemplo.com  
+  - **Senha:** admin123
+- Credenciais padrão para acesso de Professor:
+  - **E-mail:** professor@exemplo.com  
+  - **Senha:** senha123
 
 ### 3.2. Caderneta Digital
 
@@ -46,14 +52,19 @@ Isso permite um acompanhamento eficiente e uma análise criteriosa da qualidade 
 - Ferramentas para comparar, validar e verificar a coerência das informações registradas;
 - Apoio no acompanhamento pedagógico e na avaliação prática dos estudantes.
 
+### 3.5. Acesso dos Administradores
+
+- Visualização dos usuários presentes no sistema;
+- Permite a criação, exclusão e edição dos usuários;
+
 ---
 
 ## ⚙️ Tecnologias Utilizadas
 
-- **Frontend:** HTML, CSS, JavaScript  
-- **Backend:** PHP  
-- **Banco de Dados:** MySQL  
-- **Ferramentas:** GitHub, VS Code
+- **Frontend:** HTML, CSS, JavaScript;
+- **Backend:** PHP;
+- **Banco de Dados:** MySQL;
+- **Ferramentas:** GitHub, VS Code;
 
 ---
 
