@@ -11,7 +11,7 @@ document.addEventListener('DOMContentLoaded', function () {
 
         // Se for admin, redireciona para config.html
         if (user.role === "admin") {
-            window.location.href = "configADM.html";
+            window.location.href = "public/admin/configADM.html";
         } else {
             // Usuário normal, mostra o app
             document.getElementById('login-screen').classList.add('hidden');

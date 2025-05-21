@@ -12,11 +12,11 @@ document.addEventListener('DOMContentLoaded', function () {
 
         // Redireciona conforme o tipo de usuário
         if (user.role === "admin") {
-            window.location.href = "configADM.html";
+            window.location.href = "/public/admin/configADM.html";
         } else if (user.role === "teacher") {
-            window.location.href = "teacher.html"; // Página do professor
-        } else {
-            // Usuário normal, mostra o app
+            window.location.href = "/public/professor/profDoc.html";
+        } else if (user.role === "user") {
+            // Corrigido: Adicionado tratamento específico para role "user"
             document.getElementById('login-screen').classList.add('hidden');
             document.getElementById('app').classList.remove('hidden');
             loadNotes();
@@ -41,10 +41,11 @@ document.getElementById('login-form').addEventListener('submit', function (e) {
 
         // Verifica o tipo de usuário
         if (user.role === "admin") {
-            window.location.href = "configADM.html";
+            window.location.href = "/public/admin/configADM.html";
         } else if (user.role === "teacher") {
-            window.location.href = "profDoc.html"; // Página do professor
-        } else {
+            window.location.href = "/public/professor/profDoc.html";
+        } else if (user.role === "user") {
+            // Corrigido: Garantir que a tela de login seja escondida e o app mostrado
             document.getElementById('login-screen').classList.add('hidden');
             document.getElementById('app').classList.remove('hidden');
             loadNotes();
