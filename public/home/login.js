@@ -1,6 +1,6 @@
 // Dados de usuário (simulando um banco de dados)
 const users = [
-    { email: "medico@exemplo.com", password: "senha123", name: "Dr. Silva", role: "user" },
+    { email: "aluno@exemplo.com", password: "senha123", name: "Dr. Silva", role: "user" },
     { email: "admin@exemplo.com", password: "admin123", name: "Administrador", role: "admin" },
     { email: "professor@exemplo.com", password: "senha123", name: "Prof. Oliveira", role: "teacher" }
 ];
@@ -54,7 +54,7 @@ document.getElementById('login-form').addEventListener('submit', function (e) {
         //     loadNotes();
         // }
     } else {
-        alert('E-mail ou senha incorretos. Use: medico@exemplo.com / senha123, admin@exemplo.com / admin123 ou professor@exemplo.com / senha123');
+        alert('E-mail ou senha incorretos. Use: aluno@exemplo.com / senha123, admin@exemplo.com / admin123 ou professor@exemplo.com / senha123');
     }
 });
 
