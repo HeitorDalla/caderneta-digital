@@ -25,7 +25,7 @@ Isso permite um acompanhamento eficiente e uma análise criteriosa da qualidade 
 - Login seguro com e-mail e senha;
 - Armazenamento local das credenciais no navegador via `localStorage`;
 - Credenciais padrão para testes:
-  - **E-mail:** medico@exemplo.com  
+  - **E-mail:** aluno@exemplo.com  
   - **Senha:** senha123
 - Credenciais padrão para acesso de ADMIN:
   - **E-mail:** admin@exemplo.com  
