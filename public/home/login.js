@@ -45,11 +45,14 @@ document.getElementById('login-form').addEventListener('submit', function (e) {
         } else if (user.role === "teacher") {
             window.location.href = "/public/professor/profDoc.html";
         } else if (user.role === "user") {
-            // Corrigido: Garantir que a tela de login seja escondida e o app mostrado
-            document.getElementById('login-screen').classList.add('hidden');
-            document.getElementById('app').classList.remove('hidden');
-            loadNotes();
-        }
+            window.location.href = "/public/aluno/alunoUso.html";}
+            
+        // } else if (user.role === "user") {
+        //     // Corrigido: Garantir que a tela de login seja escondida e o app mostrado
+        //     document.getElementById('login-screen').classList.add('hidden');
+        //     document.getElementById('app').classList.remove('hidden');
+        //     loadNotes();
+        // }
     } else {
         alert('E-mail ou senha incorretos. Use: medico@exemplo.com / senha123, admin@exemplo.com / admin123 ou professor@exemplo.com / senha123');
     }
