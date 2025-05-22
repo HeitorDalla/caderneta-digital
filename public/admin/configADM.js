@@ -10,8 +10,8 @@ document.addEventListener('DOMContentLoaded', function () {
     renderUsersByRole();
 
     // Verifica se o usuário está logado
-    if (localStorage.getItem('loggedIn') !== 'true') {
-        window.location.href = 'index.html';
+    if (localStorage.getItem('loggedIn') !== 'true') {0
+        window.location.href = '/../login.html';
     }
 
     // Evento para abrir o modal de adicionar usuário
@@ -231,5 +231,5 @@ function deleteUser(userId) {
 document.getElementById('logout-btn').addEventListener('click', function () {
     localStorage.removeItem('loggedIn');
     localStorage.removeItem('user');
-    window.location.href = 'index.html';
+    window.location.href = "/public/admin/configADM.html";
 });
