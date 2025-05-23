@@ -24,10 +24,10 @@ Isso permite um acompanhamento eficiente e uma análise criteriosa da qualidade 
 
 - Login seguro com e-mail e senha;
 - Armazenamento local das credenciais no navegador via `localStorage`;
-- Credenciais padrão para testes:
+- Credenciais padrão para acesso de Aluno:
   - **E-mail:** aluno@exemplo.com  
   - **Senha:** senha123
-- Credenciais padrão para acesso de ADMIN:
+- Credenciais padrão para acesso de Admin:
   - **E-mail:** admin@exemplo.com  
   - **Senha:** admin123
 - Credenciais padrão para acesso de Professor:
