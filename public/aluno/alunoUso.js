@@ -4,58 +4,56 @@ const users = [
     { email: "admin@exemplo.com", password: "admin123", name: "Administrador", role: "admin" }
 ];
 
-// Verifica se o usuário está logado ao carregar a página
-document.addEventListener('DOMContentLoaded', function () {
-    if (localStorage.getItem('loggedIn') === 'true') {
-        const user = JSON.parse(localStorage.getItem('user'));
+// // Verifica se o usuário está logado ao carregar a página
+// document.addEventListener('DOMContentLoaded', function () {
+//     if (localStorage.getItem('loggedIn') === 'true') {
+//         const user = JSON.parse(localStorage.getItem('user'));
 
-        // Se for admin, redireciona para config.html
-        if (user.role === "admin") {
-            window.location.href = "public/admin/configADM.html";
-        } else {
-            // Usuário normal, mostra o app
-            document.getElementById('login-screen').classList.add('hidden');
-            document.getElementById('app').classList.remove('hidden');
-            loadNotes();
-        }
-    }
-});
+//         // Se for admin, redireciona para config.html
+//         if (user.role === "admin") {
+//             window.location.href = "public/admin/configADM.html";
+//         } else {
+//             // Usuário normal, mostra o app
+//             document.getElementById('login-screen').classList.add('hidden');
+//             document.getElementById('app').classList.remove('hidden');
+//             loadNotes();
+//         }
+//     }
+// });
 
-// Sistema de Login
-document.getElementById('login-form').addEventListener('submit', function (e) {
-    e.preventDefault();
+// // Sistema de Login
+// document.getElementById('login-form').addEventListener('submit', function (e) {
+//     e.preventDefault();
 
-    const email = document.getElementById('email').value.trim();
-    const password = document.getElementById('password').value;
+//     const email = document.getElementById('email').value.trim();
+//     const password = document.getElementById('password').value;
 
-    // Verifica as credenciais
-    const user = users.find(u => u.email === email && u.password === password);
+//     // Verifica as credenciais
+//     const user = users.find(u => u.email === email && u.password === password);
 
-    if (user) {
-        // Login bem-sucedido
-        localStorage.setItem('loggedIn', 'true');
-        localStorage.setItem('user', JSON.stringify(user));
+//     if (user) {
+//         // Login bem-sucedido
+//         localStorage.setItem('loggedIn', 'true');
+//         localStorage.setItem('user', JSON.stringify(user));
 
-        // Verifica o tipo de usuário
-        if (user.role === "admin") {
-            window.location.href = "configADM.html";
-        } else {
-            document.getElementById('login-screen').classList.add('hidden');
-            document.getElementById('app').classList.remove('hidden');
-            loadNotes();
-        }
-    } else {
-        alert('E-mail ou senha incorretos. Use: medico@exemplo.com / senha123 ou admin@exemplo.com / admin123');
-    }
-});
+//         // Verifica o tipo de usuário
+//         if (user.role === "admin") {
+//             window.location.href = "configADM.html";
+//         } else {
+//             document.getElementById('login-screen').classList.add('hidden');
+//             document.getElementById('app').classList.remove('hidden');
+//             loadNotes();
+//         }
+//     } else {
+//         alert('E-mail ou senha incorretos. Use: medico@exemplo.com / senha123 ou admin@exemplo.com / admin123');
+//     }
+// });
 
 // Sistema de Logout
 document.getElementById('logout-btn').addEventListener('click', function () {
     localStorage.removeItem('loggedIn');
     localStorage.removeItem('user');
-    document.getElementById('app').classList.add('hidden');
-    document.getElementById('login-screen').classList.remove('hidden');
-    document.getElementById('login-form').reset();
+    window.location.href = "/../../login.html";
 });
 
 // Carrega as anotações salvas
