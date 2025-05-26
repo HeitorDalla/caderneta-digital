@@ -1,7 +1,3 @@
-// Dados de usuário (simulando um banco de dados)
-const users = [
-    { email: "professor@exemplo.com", password: "senha123", name: "Prof. Oliveira", role: "teacher" }
-];
 
 // Dados simulados de alunos e anotações
 const students = [
@@ -87,13 +83,11 @@ function loginSuccess() {
     loadStudents();
 }
 
-// Sistema de Logout
-document.getElementById('logout-btn').addEventListener('click', function() {
+// Botão de logout
+document.getElementById('logout-btn').addEventListener('click', function () {
     localStorage.removeItem('loggedIn');
     localStorage.removeItem('user');
-    document.getElementById('app').classList.add('hidden');
-    document.getElementById('login-screen').classList.remove('hidden');
-    document.getElementById('login-form').reset();
+    window.location.href = "/../../login.html";
 });
 
 // Carrega a lista de alunos
