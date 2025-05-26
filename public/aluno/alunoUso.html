@@ -8,6 +8,8 @@
     <link rel="stylesheet" href="AlunoUso.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
     <link rel="shortcut icon" type="image/svg" href="/logo-aba_book-medical-solid.svg"/>
+    <!-- Exportar para PDF (biblioteca) -->
+     <script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf/2.5.1/jspdf.umd.min.js"></script>
 </head>
 
 <body>
@@ -38,6 +40,9 @@
             <div id="sidebar-notes-list" class="sidebar-notes-list">
                 <!-- Anotações serão carregadas aqui -->
             </div>
+            <button id="export-pdf-btn" class="export-button">
+            <i class="fas fa-file-pdf"></i> Exportar PDF
+            </button>
         </div>
         <div id="sidebar-overlay" class="sidebar-overlay"></div>
 

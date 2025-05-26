@@ -125,6 +125,78 @@ function loadNotes() {
     `).join('');
 }
 
+// Exportar para PDF
+// Adicione no início do arquivo (após os imports, se houver)
+const { jsPDF } = window.jspdf;
+
+// Adicione este evento listener junto com os outros
+document.getElementById('export-pdf-btn').addEventListener('click', exportToPDF);
+
+// Função para exportar para PDF
+async function exportToPDF() {
+    const notes = JSON.parse(localStorage.getItem('notes')) || [];
+    
+    if (notes.length === 0) {
+        alert('Não há anotações para exportar');
+        return;
+    }
+
+    // Cria um novo documento PDF
+    const doc = new jsPDF();
+    
+    // Adiciona todas as anotações ao PDF
+    let yPosition = 20;
+    notes.forEach((note, index) => {
+        // Adiciona o título
+        doc.setFontSize(18);
+        doc.setTextColor(59, 130, 246);
+        doc.text(note.title || 'Anotação sem título', 105, yPosition, { align: 'center' });
+        yPosition += 10;
+        
+        // Adiciona a data
+        doc.setFontSize(12);
+        doc.setTextColor(107, 114, 128);
+        doc.text(`Criado em: ${note.date}`, 105, yPosition, { align: 'center' });
+        yPosition += 15;
+        
+        // Adiciona o conteúdo
+        doc.setFontSize(12);
+        doc.setTextColor(0, 0, 0);
+        const contentLines = doc.splitTextToSize(note.content, 180);
+        doc.text(contentLines, 15, yPosition);
+        yPosition += contentLines.length * 7 + 10;
+        
+        // Adiciona sugestões da IA se existirem
+        if (note.suggestions) {
+            doc.setFontSize(14);
+            doc.setTextColor(59, 130, 246);
+            doc.text('Sugestões da IA:', 15, yPosition);
+            yPosition += 10;
+            
+            doc.setFontSize(12);
+            doc.setTextColor(0, 0, 0);
+            const suggestionLines = doc.splitTextToSize(note.suggestions, 180);
+            doc.text(suggestionLines, 15, yPosition);
+            yPosition += suggestionLines.length * 7 + 15;
+        }
+        
+        // Adiciona nova página se não for a última anotação
+        if (index < notes.length - 1) {
+            doc.addPage();
+            yPosition = 20;
+        }
+    });
+    
+    // Adiciona rodapé na última página
+    doc.setFontSize(10);
+    doc.setTextColor(107, 114, 128);
+    doc.text('Exportado do MedNotes - Caderneta Digital', 105, 285, { align: 'center' });
+    
+    // Salva o PDF
+    doc.save(`Anotações MedNotes.pdf ${new Date().toLocaleDateString('pt-BR').replace(/\//g, '-')}.pdf`);
+}
+
+
 // Eventos adicionais
 document.getElementById('new-note-btn').addEventListener('click', () => {
     document.getElementById('note-title').value = '';
