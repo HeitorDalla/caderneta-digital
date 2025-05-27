@@ -134,14 +134,14 @@ button, input, textarea {
 .login-button:hover {
     background-color: #1d4ed8;
 }
-
-/* Aplicação Principal */
+/*
+/* Aplicação Principal
 #app {
     display: flex;
     flex-direction: column;
     min-height: 100vh;
 }
-
+ */
 .app-header {
     background-color: var(--white);
     box-shadow: var(--shadow);
