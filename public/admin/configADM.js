@@ -80,7 +80,7 @@ function renderUsersByRole() {
                                 <div class="text-xs sm:text-sm text-gray-500">${user.email}</div>
                             </td>
                             <td class="px-3 sm:px-6 py-2 sm:py-4 whitespace-nowrap text-right text-xs sm:text-sm font-medium">
-                                <div class="action-buttons flex flex-wrap gap-1 justify-end">
+                                <div class="action-buttons flex flex-wrap gap-2 justify-end">
                                     <button class="view-user action-button flex items-center text-blue-600 hover:text-blue-900 px-2 py-1 rounded border border-blue-200 bg-blue-50" data-id="${user.id}">
                                         <i class="fas fa-eye text-xs mr-1"></i>
                                         <span class="text-xs">Ver</span>
@@ -263,6 +263,7 @@ document.getElementById('add-user-btn').addEventListener('click', function() {
     document.getElementById('user-form').reset();
     document.getElementById('user-id').value = '';
     
+
     // Resetar o campo de senha
     document.getElementById('password').type = 'password';
     const icon = document.querySelector('#toggle-password i');
