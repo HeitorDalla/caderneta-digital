@@ -180,6 +180,7 @@ function editUser(userId) {
     document.getElementById('role').value = user.role;
 
     document.getElementById('user-form-modal').classList.remove('hidden');
+    setupPasswordToggle(); // Configura o toggle de senha
 }
 
 // Salvar usuário (adicionar ou editar)
@@ -225,6 +226,64 @@ function deleteUser(userId) {
         users = users.filter(u => u.id !== userId);
         renderUsersByRole();
     }
+}
+
+// Evento para fechar o modal de formulário ao clicar fora dele
+document.getElementById('user-form-modal').addEventListener('click', function (e) {
+    if (e.target === this) {
+        this.classList.add('hidden');
+    }
+});
+
+// Modifique a função editUser para incluir a configuração do toggle
+function editUser(userId) {
+    const user = users.find(u => u.id === userId);
+    if (!user) return;
+
+    document.getElementById('form-modal-title').textContent = 'Editar Usuário';
+    document.getElementById('user-id').value = user.id;
+    document.getElementById('name').value = user.name;
+    document.getElementById('email').value = user.email;
+    document.getElementById('password').value = user.password;
+    document.getElementById('role').value = user.role;
+
+    // Configura o toggle de senha
+    setupPasswordToggle();
+    
+    document.getElementById('user-form-modal').classList.remove('hidden');
+}
+
+// Adicione também no evento de abrir o modal para adicionar novo usuário
+document.getElementById('add-user-btn').addEventListener('click', function() {
+    document.getElementById('form-modal-title').textContent = 'Adicionar Novo Usuário';
+    document.getElementById('user-form').reset();
+    document.getElementById('user-id').value = '';
+    
+    document.getElementById('user-form-modal').classList.remove('hidden');
+    setupPasswordToggle(); // Configura o toggle de senha
+});
+
+// Configuração do toggle de senha
+function setupPasswordToggle() {
+    const passwordInput = document.getElementById('password');
+    const toggleButton = document.getElementById('toggle-password');
+    const icon = toggleButton.querySelector('i');
+
+    toggleButton.addEventListener('click', function() {
+        const isPassword = passwordInput.type === 'password';
+        
+        // Alterna o tipo do input
+        passwordInput.type = isPassword ? 'text' : 'password';
+        
+        // Alterna os ícones corretamente
+        if (isPassword) {
+            icon.classList.remove('fa-eye');
+            icon.classList.add('fa-eye-slash');
+        } else {
+            icon.classList.remove('fa-eye-slash');
+            icon.classList.add('fa-eye');
+        }
+    });
 }
 
 // Sistema de Logout
