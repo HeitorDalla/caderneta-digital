@@ -247,9 +247,13 @@ function editUser(userId) {
     document.getElementById('password').value = user.password;
     document.getElementById('role').value = user.role;
 
-    // Configura o toggle de senha
-    setupPasswordToggle();
+    // Resetar o campo de senha para o estado padrão
+    document.getElementById('password').type = 'password';
+    const icon = document.querySelector('#toggle-password i');
+    icon.classList.remove('fa-eye-slash');
+    icon.classList.add('fa-eye');
     
+    setupPasswordToggle();
     document.getElementById('user-form-modal').classList.remove('hidden');
 }
 
@@ -259,8 +263,14 @@ document.getElementById('add-user-btn').addEventListener('click', function() {
     document.getElementById('user-form').reset();
     document.getElementById('user-id').value = '';
     
+    // Resetar o campo de senha
+    document.getElementById('password').type = 'password';
+    const icon = document.querySelector('#toggle-password i');
+    icon.classList.remove('fa-eye-slash');
+    icon.classList.add('fa-eye');
+    
+    setupPasswordToggle();
     document.getElementById('user-form-modal').classList.remove('hidden');
-    setupPasswordToggle(); // Configura o toggle de senha
 });
 
 // Configuração do toggle de senha
@@ -269,20 +279,18 @@ function setupPasswordToggle() {
     const toggleButton = document.getElementById('toggle-password');
     const icon = toggleButton.querySelector('i');
 
-    toggleButton.addEventListener('click', function() {
+    // Remove qualquer listener anterior para evitar duplicação
+    toggleButton.replaceWith(toggleButton.cloneNode(true));
+    const newToggleButton = document.getElementById('toggle-password');
+    const newIcon = newToggleButton.querySelector('i');
+
+    newToggleButton.addEventListener('click', function() {
         const isPassword = passwordInput.type === 'password';
-        
-        // Alterna o tipo do input
         passwordInput.type = isPassword ? 'text' : 'password';
         
         // Alterna os ícones corretamente
-        if (isPassword) {
-            icon.classList.remove('fa-eye');
-            icon.classList.add('fa-eye-slash');
-        } else {
-            icon.classList.remove('fa-eye-slash');
-            icon.classList.add('fa-eye');
-        }
+        newIcon.classList.toggle('fa-eye-slash');
+        newIcon.classList.toggle('fa-eye');
     });
 }
 
