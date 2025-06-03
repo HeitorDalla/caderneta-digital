@@ -11,7 +11,7 @@ const users = [
     { id: 1, email: "professor@exemplo.com", password: "senha123", name: "Professor", role: "teacher" }
 ];
 
-// Anotações simuladas (em um sistema real, isso viria de um banco de dados)
+// Anotações simuladas
 let notes = [
     {
         id: 1,
@@ -216,7 +216,7 @@ function openNoteModal(noteId) {
     document.getElementById('modal-note-title').textContent = note.title || 'Anotação sem título';
     document.getElementById('modal-note-date').textContent = note.date;
     document.getElementById('modal-note-author').textContent = `Por: ${student ? student.name : 'Aluno desconhecido'}`;
-    document.getElementById('modal-note-content').innerHTML = note.content.replace(/\n/g, '<br>');
+    document.getElementById('modal-note-content').textContent = note.content;
     
     if (note.suggestions) {
         document.getElementById('modal-suggestions-content').innerHTML = note.suggestions;
@@ -228,7 +228,7 @@ function openNoteModal(noteId) {
     document.getElementById('teacher-feedback').value = note.teacherFeedback || '';
     
     // Armazena o ID da nota no modal para referência
-    document.querySelector('#note-modal [data-id]').dataset.id = noteId;
+    document.getElementById('note-modal').dataset.id = noteId;
     
     // Mostra o modal
     document.getElementById('note-modal').classList.remove('hidden');
@@ -244,7 +244,7 @@ function closeNoteModal() {
 
 // Salva o feedback do professor
 document.getElementById('save-feedback').addEventListener('click', function() {
-    const noteId = parseInt(document.querySelector('#note-modal [data-id]')?.dataset.id);
+    const noteId = parseInt(document.getElementById('note-modal').dataset.id);
     if (!noteId) return;
     
     const feedback = document.getElementById('teacher-feedback').value.trim();
@@ -256,8 +256,6 @@ document.getElementById('save-feedback').addEventListener('click', function() {
         }
         return note;
     });
-    
-    // Em um sistema real, aqui você faria uma chamada para salvar no banco de dados
     
     alert('Feedback salvo com sucesso!');
     closeNoteModal();
