@@ -1,10 +1,14 @@
-
 // Dados simulados de alunos e anotações
 const students = [
     { id: 1, name: "Ana Silva", email: "ana@exemplo.com", avatar: "https://randomuser.me/api/portraits/women/44.jpg" },
     { id: 2, name: "Bruno Costa", email: "bruno@exemplo.com", avatar: "https://randomuser.me/api/portraits/men/32.jpg" },
     { id: 3, name: "Carlos Mendes", email: "carlos@exemplo.com", avatar: "https://randomuser.me/api/portraits/men/67.jpg" },
     { id: 4, name: "Daniela Lima", email: "daniela@exemplo.com", avatar: "https://randomuser.me/api/portraits/women/63.jpg" }
+];
+
+// Usuários simulados (para login)
+const users = [
+    { id: 1, email: "professor@exemplo.com", password: "senha123", name: "Professor", role: "teacher" }
 ];
 
 // Anotações simuladas (em um sistema real, isso viria de um banco de dados)
@@ -55,6 +59,10 @@ document.addEventListener('DOMContentLoaded', function() {
     if (localStorage.getItem('loggedIn') === 'true') {
         loginSuccess();
     }
+    
+    // Carrega o tema salvo no localStorage ou usa o tema claro por padrão
+    const savedTheme = localStorage.getItem('theme') || 'light';
+    setTheme(savedTheme);
 });
 
 // Sistema de Login
@@ -89,6 +97,34 @@ document.getElementById('logout-btn').addEventListener('click', function () {
     localStorage.removeItem('user');
     window.location.href = "/../../login.html";
 });
+
+/**
+ * Define o tema da aplicação (claro/escuro)
+ * @param {string} theme - 'light' ou 'dark'
+ */
+function setTheme(theme) {
+    if (theme === 'dark') {
+        document.body.classList.add('dark-mode');
+        document.getElementById('theme-toggle').innerHTML = '<i class="fas fa-sun"></i>';
+    } else {
+        document.body.classList.remove('dark-mode');
+        document.getElementById('theme-toggle').innerHTML = '<i class="fas fa-moon"></i>';
+    }
+}
+
+/**
+ * Alterna entre temas claro e escuro
+ */
+function toggleTheme() {
+    const currentTheme = document.body.classList.contains('dark-mode') ? 'dark' : 'light';
+    const newTheme = currentTheme === 'light' ? 'dark' : 'light';
+    
+    setTheme(newTheme);
+    localStorage.setItem('theme', newTheme);
+}
+
+// Evento do botão de alternar tema
+document.getElementById('theme-toggle').addEventListener('click', toggleTheme);
 
 // Carrega a lista de alunos
 function loadStudents(searchTerm = '') {
@@ -190,6 +226,9 @@ function openNoteModal(noteId) {
     }
     
     document.getElementById('teacher-feedback').value = note.teacherFeedback || '';
+    
+    // Armazena o ID da nota no modal para referência
+    document.querySelector('#note-modal [data-id]').dataset.id = noteId;
     
     // Mostra o modal
     document.getElementById('note-modal').classList.remove('hidden');
