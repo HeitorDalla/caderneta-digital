@@ -355,6 +355,33 @@ function exportToPDF() {
     doc.save(`Anotações MedNotes - ${new Date().toLocaleDateString('pt-BR').replace(/\//g, '-')}.pdf`);
 }
 
+/**
+ * Define o tema da aplicação (claro/escuro)
+ * @param {string} theme - 'light' ou 'dark'
+ */
+function setTheme(theme) {
+    if (theme === 'dark') {
+        document.body.classList.add('dark-mode');
+        document.getElementById('theme-toggle').innerHTML = '<i class="fas fa-sun"></i>';
+    } else {
+        document.body.classList.remove('dark-mode');
+        document.getElementById('theme-toggle').innerHTML = '<i class="fas fa-moon"></i>';
+    }
+}
+
+/**
+ * Alterna entre temas claro e escuro
+ */
+function toggleTheme() {
+    const currentTheme = document.body.classList.contains('dark-mode') ? 'dark' : 'light';
+    const newTheme = currentTheme === 'light' ? 'dark' : 'light';
+    
+    setTheme(newTheme);
+    localStorage.setItem('theme', newTheme);
+}
+
+// Evento do botão de alternar tema
+document.getElementById('theme-toggle').addEventListener('click', toggleTheme);
 
 // Evento do botão de logout
 document.getElementById('logout-btn').addEventListener('click', function() {
