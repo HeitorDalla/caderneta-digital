@@ -57,6 +57,14 @@ Isso permite um acompanhamento eficiente e uma análise criteriosa da qualidade 
 - Visualização dos usuários presentes no sistema;
 - Permite a criação, exclusão e edição dos usuários;
 
+### 3.6 Modo Escuro e Modo Claro
+
+- **Alternância Personalizável:** Permite aos usuários escolher entre o modo claro e o modo escuro, adaptando-se às preferências visuais e condições de iluminação;
+- **Consistência Visual:** Mantém a identidade visual e a usabilidade em ambos os modos, garantindo legibilidade e conforto visual;
+- **Preferência Salva:** Armazena a escolha do tema no navegador, lembrando da última configuração utilizada pelo usuário;
+- **Redução de Fadiga Ocular:** O modo escuro oferece uma experiência mais confortável em ambientes com pouca luz, reduzindo o cansaço visual durante o uso prolongado;
+- **Acessibilidade:** Melhora a experiência para usuários com sensibilidade à luz ou necessidades específicas de visualização.
+
 ---
 
 ## ⚙️ Tecnologias Utilizadas
