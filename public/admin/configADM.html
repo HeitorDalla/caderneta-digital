@@ -11,9 +11,9 @@
     <link rel="shortcut icon" type="image/svg" href="/logo-aba_book-medical-solid.svg"/>
 </head>
 
-<body class="bg-gray-50 min-h-screen">
+<body class="min-h-screen" style="background-color: var(--bg-color); color: var(--text-color);">
     <!-- Cabeçalho -->
-    <header class="bg-white shadow-sm p-4">
+    <header class="shadow-sm p-4" style="background-color: var(--header-bg);">
         <div class="container mx-auto flex flex-col sm:flex-row justify-between items-start sm:items-center gap-2">
             <div class="flex items-center">
                 <a href="index.html" class="mr-4 text-gray-600 hover:text-blue-600">
@@ -43,13 +43,13 @@
     <!-- Conteúdo Principal -->
     <main class="container mx-auto p-2 sm:p-4 pb-20">
         <!-- Seção de Usuários -->
-        <div class="bg-white rounded-xl shadow-md p-4 sm:p-6 mb-6">
+        <div class="rounded-xl shadow-md p-4 sm:p-6 mb-6" style="background-color: var(--card-bg); border: 1px solid var(--border-color);">
             <div class="flex justify-between items-center mb-4">
                 <h2 class="text-base sm:text-lg font-semibold text-gray-800">Gerenciamento de Usuários</h2>
             </div>
 
             <!-- Grupos de Usuários -->
-            <div id="users-by-role">
+            <div id="users-by-role ">
                 <!-- Os usuários serão organizados por função aqui -->
             </div>
         </div>
@@ -129,7 +129,7 @@
     </main>
 
     <!-- Rodapé Móvel -->
-    <nav class="fixed bottom-0 left-0 right-0 bg-white border-t border-gray-200 flex justify-around py-2 sm:py-3">
+    <nav class="fixed bottom-0 left-0 right-0 bg-[var(--bg-color)] border-t border-[var(--border-color)] flex justify-around py-2 sm:py-3">
         <!-- Botão ocupado para o futuro -->
         <!-- <a href="indexADM.html" class="text-gray-600 p-2">
             <i class="fas fa-home text-lg sm:text-xl"></i>

@@ -66,34 +66,39 @@ function renderUsersByRole() {
         const table = document.createElement('div');
         table.className = 'responsive-table';
         table.innerHTML = `
-            <table class="min-w-full divide-y divide-gray-200">
-                <thead class="bg-gray-50">
-                    <tr>
-                        <th class="px-3 sm:px-6 py-2 sm:py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider">Nome</th>
-                        <th class="px-3 sm:px-6 py-2 sm:py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider">E-mail</th>
-                        <th class="px-3 sm:px-6 py-2 sm:py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider">Ações</th>
+            <table class="min-w-full style="color: var(--text-color);">
+                <thead style ="background-color: var(--header-bg);">
+                    <tr style="border-bottom: 1px solid var(--border-color);">
+                        <th class="px-3 sm:px-6 py-2 sm:py-3 text-left text-xs font-medium uppercase tracking-wider" style="color: var(--text-color);">Nome</th>
+                        <th class="px-3 sm:px-6 py-2 sm:py-3 text-left text-xs font-medium uppercase tracking-wider" style="color: var(--text-color);">E-mail</th>
+                        <th class="px-3 sm:px-6 py-2 sm:py-3 text-left text-xs font-medium uppercase tracking-wider" style="color: var(--text-color);">Ações</th>
                     </tr>
                 </thead>
-                <tbody id="users-list-${role.replace(/\s+/g, '-')}" class="bg-white divide-y divide-gray-200">
+                <tbody id="users-list-${role.replace(/\s+/g, '-')}" class="divide-y" style="background-color: var(--card-bg); border-color: var(--border-color);">
                     ${roleUsers.map(user => `
-                        <tr class="user-card hover:bg-gray-50">
+                        <tr class="user-card" style="background-color: var(--card-bg); border-color: var(--border-color);">
                             <td class="px-3 sm:px-6 py-2 sm:py-4 whitespace-nowrap">
-                                <div class="text-xs sm:text-sm font-medium text-gray-900">${user.name}</div>
+                                <div class="text-xs sm:text-sm font-medium" style="color: var(--text-color);">${user.name}</div>
                             </td>
                             <td class="px-3 sm:px-6 py-2 sm:py-4 whitespace-nowrap">
-                                <div class="text-xs sm:text-sm text-gray-500">${user.email}</div>
+                                <div class="text-xs sm:text-sm" style="color: var(--text-secondary);">${user.email}</div>
                             </td>
                             <td class="px-3 sm:px-6 py-2 sm:py-4 whitespace-nowrap text-right text-xs sm:text-sm font-medium">
                                 <div class="action-buttons flex flex-wrap gap-2 justify-end">
-                                    <button class="view-user action-button flex items-center text-blue-600 hover:text-blue-900 px-2 py-1 rounded border border-blue-200 bg-blue-50" data-id="${user.id}">
+                                    <!-- Botão Ver -->
+                                    <button class="view-user flex items-center text-[var(--view-color)] hover:text-[var(--view-hover)] px-2 py-1 rounded border border-[var(--view-border)] bg-[var(--view-bg)]" data-id="${user.id}">
                                         <i class="fas fa-eye text-xs mr-1"></i>
                                         <span class="text-xs">Ver</span>
                                     </button>
-                                    <button class="edit-user action-button flex items-center text-yellow-600 hover:text-yellow-900 px-2 py-1 rounded border border-yellow-200 bg-yellow-50" data-id="${user.id}">
+
+                                    <!-- Botão Editar -->
+                                    <button class="edit-user flex items-center text-[var(--edit-color)] hover:text-[var(--edit-hover)] px-2 py-1 rounded border border-[var(--edit-border)] bg-[var(--edit-bg)]" data-id="${user.id}">
                                         <i class="fas fa-edit text-xs mr-1"></i>
                                         <span class="text-xs">Editar</span>
                                     </button>
-                                    <button class="delete-user action-button flex items-center text-red-600 hover:text-red-900 px-2 py-1 rounded border border-red-200 bg-red-50" data-id="${user.id}">
+
+                                    <!-- Botão Excluir -->
+                                    <button class="delete-user flex items-center text-[var(--delete-color)] hover:text-[var(--delete-hover)] px-2 py-1 rounded border border-[var(--delete-border)] bg-[var(--delete-bg)]" data-id="${user.id}">
                                         <i class="fas fa-trash text-xs mr-1"></i>
                                         <span class="text-xs">Excluir</span>
                                     </button>
