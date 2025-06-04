@@ -53,6 +53,19 @@
     gap: 0.5rem;
 }
 
+/* Modo noturno*/
+.theme-toggle {
+    background: none;
+    border: none;
+    color: var(--text-color);
+    cursor: pointer;
+    font-size: 1.25rem;
+    padding: 0.5rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
 .action-button {
     display: inline-flex;
     align-items: center;
