@@ -169,6 +169,30 @@ function showUserDetails(userId) {
     `;
 
     document.getElementById('user-details-modal').classList.remove('hidden');
+
+
+   // Configura os eventos para os botões existentes no modal
+    const editBtn = document.querySelector('#user-details-modal .mt-4 button:first-child');
+    const deleteBtn = document.querySelector('#user-details-modal .mt-4 button:last-child');
+
+    // Remove event listeners antigos para evitar duplicação
+    editBtn.replaceWith(editBtn.cloneNode(true));
+    deleteBtn.replaceWith(deleteBtn.cloneNode(true));
+
+    // Seleciona os novos botões clonados
+    const newEditBtn = document.querySelector('#user-details-modal .mt-4 button:first-child');
+    const newDeleteBtn = document.querySelector('#user-details-modal .mt-4 button:last-child');
+
+    // Adiciona os eventos
+    newEditBtn.addEventListener('click', function() {
+        document.getElementById('user-details-modal').classList.add('hidden');
+        editUser(userId);
+    });
+
+    newDeleteBtn.addEventListener('click', function() {
+        document.getElementById('user-details-modal').classList.add('hidden');
+        deleteUser(userId);
+    });
 }
 
 // Fecha o modal de detalhes
