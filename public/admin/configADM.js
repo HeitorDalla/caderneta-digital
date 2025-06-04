@@ -36,6 +36,10 @@ document.addEventListener('DOMContentLoaded', function () {
         e.preventDefault();
         saveUser();
     });
+
+    // Carrega o tema salvo no localStorage ou usa o tema claro por padrão
+    const savedTheme = localStorage.getItem('theme') || 'light';
+    setTheme(savedTheme);
 });
 
 // Renderiza os usuários agrupados por função
