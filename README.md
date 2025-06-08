@@ -81,7 +81,7 @@ Sistema automatizado de backup que garante que todas as anotações sejam preser
 
 ---
 
-## 🎯 Casos de Uso Detalhados
+## Casos de Uso Detalhados
 
 ### Para Estudantes de Enfermagem
 
@@ -97,13 +97,13 @@ Gestores educacionais podem analisar dados agregados sobre efetividade do ensino
 
 ---
 
-## 🔒 Segurança e Privacidade
+## Segurança e Privacidade
 
 APRESENTAR FUNCIONALIDADES IMPORTANTES
 
 ---
 
-## 🚀 Arquitetura do Sistema
+## Arquitetura do Sistema
 
 ### Frontend
 Interface responsiva desenvolvida com HTML5 semântico, CSS3 moderno com variáveis customizáveis para temas, e JavaScript modular com padrões de desenvolvimento limpo.
@@ -125,13 +125,13 @@ O MedNotes foi desenvolvido seguindo princípios de design responsivo, garantind
 
 ---
 
-## 🔄 Processo de Desenvolvimento e Versionamento
+## Processo de Desenvolvimento e Versionamento
 
 Utilização do Git para controle de versão com estratégia de branching organizada, incluindo branches principais para produção e desenvolvimento, feature branches para novas funcionalidades, e processo de code review antes de merges. Implementação de testes automatizados para garantir qualidade e estabilidade do código. Deploy automatizado com ambientes separados para desenvolvimento, teste e produção.
 
 ---
 
-## 🔮 Roadmap e Futuras Implementações
+## Roadmap e Futuras Implementações
 
 ### Fase 2 - Melhorias Visuais e UX
 Redesign completo da interface com foco em experiência do usuário, implementação de animações e micro-interações, otimização para dispositivos móveis, e personalização avançada de temas e layouts.
@@ -147,7 +147,7 @@ Salas virtuais para estudo em grupo, sistema de mentoria peer-to-peer, gamifica�
 
 ---
 
-## ⚠️ Considerações Importantes
+##  Considerações Importantes
 
 Este projeto representa atualmente um **protótipo de baixa fidelidade** em sua fase inicial. O foco principal está em demonstrar a proposta funcional da aplicação, priorizando estrutura sólida e fluxo de navegação intuitivo. Todos os dados utilizados são estritamente fictícios e simulados, não se baseando em informações reais ou sensíveis. Não há conteúdo restrito, confidencial ou ofensivo que possa comprometer privacidade, integridade ou reputação de indivíduos ou organizações.
 
@@ -155,7 +155,7 @@ O sistema atual utiliza armazenamento local (localStorage) para algumas funciona
 
 ---
 
-## 🤝 Como Executar o Projeto
+## Como Executar o Projeto
 
 ### Pré-requisitos
 - Servidor web com suporte a PHP 8.0 ou superior (Apache/Nginx)
@@ -177,13 +177,13 @@ Para ambiente de produção, certifique-se de alterar todas as credenciais padr�
 
 ---
 
-## 📝 Contribuições e Suporte
+## Contribuições e Suporte
 
 APRESENTAR DADOS
 
 ---
 
-## 📄 Licença e Autoria
+## Licença e Autoria
 
 Este projeto foi desenvolvido em parceria com o **SENAC** como parte de um programa de inovação educacional na área de saúde. O desenvolvimento técnico foi realizado seguindo melhores práticas de engenharia de software e design centrado no usuário. O projeto está licenciado sob licença MIT, permitindo uso, modificação e distribuição livre, desde que mantidas as atribuições originais de autoria.
 
@@ -191,7 +191,7 @@ A parceria com o SENAC garante que o projeto atenda às necessidades reais dos e
 
 ---
 
-## 🌟 Impacto Educacional Esperado
+## Impacto Educacional Esperado
 
 O MedNotes representa uma evolução significativa na forma como estudantes de enfermagem organizam e acessam informações durante sua formação. A integração de inteligência artificial não substitui o conhecimento e experiência dos professores, mas sim complementa o processo de aprendizagem, oferecendo recursos adicionais que enriquecem a experiência educacional.
 
