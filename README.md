@@ -1,6 +1,6 @@
 # MedNotes
 
-O **MedNotes** é uma caderneta digital desenvolvida em parceria com o **SENAC**, voltada especialmente aos estudantes do curso de Enfermagem. Seu principal objetivo é oferecer uma plataforma intuitiva para que os alunos registrem anotações durante as aulas e possam acessá-las durante os estágios, com o apoio de Inteligência Artificial (IA) para enriquecer o conteúdo e facilitar o aprendizado. Os professores, por sua vez, têm acesso às anotações dos alunos, incluindo aquelas enriquecidas com informações da IA. Isso permite um acompanhamento eficiente e uma análise criteriosa da qualidade do conteúdo, contribuindo para a formação de profissionais de saúde mais bem preparados.
+O **MedNotes** é uma caderneta digital desenvolvida em parceria com o **SENAC**, voltada especialmente aos estudantes do curso de Enfermagem. Esta plataforma foi criada para transformar a forma como alunos registram e acessam suas anotações acadêmicas, oferecendo uma solução moderna e integrada que combina tecnologia avançada com as necessidades específicas da educação em saúde. Os professores também se beneficiam da plataforma através do acesso às anotações dos alunos, permitindo um acompanhamento mais eficiente do processo de aprendizagem e contribuindo para a formação de profissionais de saúde mais bem preparados.
 
 ---
 
@@ -75,9 +75,9 @@ VIDEO PARA DEMONSTRAÇÃO
 
 Implementação de notificações inteligentes que alertam alunos sobre atualizações importantes, sugestões da IA que requerem atenção, feedbacks de professores e lembretes para revisão de conteúdo.
 
-### Backup e Sincronização
+### Exportação de Anotações
 
-Sistema automatizado de backup que garante que todas as anotações sejam preservadas e possam ser recuperadas em caso de problemas técnicos. Sincronização em tempo real entre diferentes dispositivos, permitindo que alunos acessem suas anotações de qualquer lugar. Exportação de anotações em diversos formatos (PDF, Word, texto simples) para uso offline ou impressão.
+O sistema oferece funcionalidade de exportação de anotações em formato PDF, permitindo que os usuários salvem suas anotações para consulta offline ou impressão. Esta funcionalidade garante que todas as anotações sejam preservadas e possam ser acessadas independentemente da conectividade com a internet. O processo de exportação mantém a formatação original das anotações, incluindo categorias, datas e conteúdo enriquecido pela IA, proporcionando uma experiência consistente entre a versão digital e impressa.
 
 ---
 
@@ -127,23 +127,29 @@ O MedNotes foi desenvolvido seguindo princípios de design responsivo, garantind
 
 ## Processo de Desenvolvimento e Versionamento
 
-Utilização do Git para controle de versão com estratégia de branching organizada, incluindo branches principais para produção e desenvolvimento, feature branches para novas funcionalidades, e processo de code review antes de merges. Implementação de testes automatizados para garantir qualidade e estabilidade do código. Deploy automatizado com ambientes separados para desenvolvimento, teste e produção.
+Utilização do Git para controle de versão com estratégia de branching organizada. Deploy automatizado com ambientes separados para desenvolvimento, teste e produção.
 
 ---
 
 ## Roadmap e Futuras Implementações
 
-### Fase 1 - Melhorias Visuais e UX
-Redesign completo da interface com foco em experiência do usuário, implementação de animações e micro-interações, otimização para dispositivos móveis, e personalização avançada de temas e layouts.
+### Implementação Atual - Versão Base (Sem IA)
+Fase 1 - Funcionalidades Essenciais
 
-### Fase 2 - Integrações Avançadas
-Integração com sistemas acadêmicos existentes, API para aplicativos móveis nativos, conectividade com dispositivos wearables para coleta de dados em tempo real durante estágios, e integração com bibliotecas médicas digitais.
+- Sistema completo de autenticação e autorização com três níveis de acesso
+- Caderneta digital com criação, edição e organização de anotações
+- Interface responsiva com modo claro/escuro
+- Painel administrativo para gerenciamento de usuários
+- Sistema de exportação de anotações em PDF
+- Implementação de busca avançada e categorização de conteúdo
 
-### Fase 3 - Inteligência Artificial Avançada
-Implementação de modelos de IA especializados em conteúdo médico, sistema de recomendação personalizado baseado em padrões de aprendizagem, análise preditiva para identificação precoce de dificuldades de aprendizagem, e geração automática de questionários e exercícios baseados nas anotações.
+### Implementação Futura - Versão com Inteligência Artificial
+Fase 2 - Integração com IA
 
-### Fase 4 - Recursos Colaborativos Expandidos
-Salas virtuais para estudo em grupo, sistema de mentoria peer-to-peer, gamificação com conquistas e progressão, e marketplace de conteúdo onde professores podem compartilhar material premium.
+- Implementação da API da OpenAI para análise de conteúdo
+- Sistema de enriquecimento automático de anotações
+- Sugestões inteligentes baseadas em contexto médico
+- Análise de qualidade e veracidade das informações
 
 ---
 
