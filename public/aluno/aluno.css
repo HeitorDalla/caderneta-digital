@@ -628,4 +628,27 @@ button, input, textarea {
     #note-content {
         min-height: 10rem;
     }
+
+}
+
+.hidden {
+  display: none;
+}
+
+.topic-select, #custom-topic {
+  width: 100%;
+  padding: 10px;
+  margin-bottom: 15px;
+  border: 1px solid #ddd;
+  border-radius: 4px;
+}
+
+.note-topic {
+  display: inline-block;
+  background-color: #3b82f6;
+  color: white;
+  padding: 2px 8px;
+  border-radius: 12px;
+  font-size: 0.7em;
+  margin-bottom: 5px;
 }

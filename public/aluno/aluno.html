@@ -46,9 +46,17 @@
             <!-- Editor de anotações -->
             <div class="note-editor">
                 <h2>Nova Anotação</h2>
-                <div class="form-group title-input">
-                    <input type="text" id="note-title" placeholder="Título (ex: Procedimento com Paciente X)">
-                </div>
+              <div class="form-group title-input">
+     <select id="note-topic" class="topic-select">
+<option value="">Selecione um tópico</option>
+ <option value="procedimento-paciente">Procedimento com Paciente</option>
+  <option value="diagnostico-diferencial">Diagnóstico Diferencial</option>
+   <option value="farmacologia">Farmacologia Aplicada</option>
+    <option value="exame-fisico">Exame Físico</option>
+      <option value="outro">Outro (especifique)</option>
+ </select>
+  <input type="text" id="custom-topic" class="hidden" placeholder="Digite o tópico">
+</div>
                 <textarea id="note-content" rows="8" placeholder="Descreva o procedimento realizado..."></textarea>
                 <div class="editor-actions">
                     <!-- Botão para salvar anotação -->
@@ -153,6 +161,6 @@
     </div>
 
     <!-- Script principal da aplicação -->
-    <script src="alunoUso.js"></script>
+    <script src="aluno.js"></script>
 </body>
 </html>
