@@ -1,6 +1,6 @@
-# MedNotes
+# TrilhaTec
 
-O **MedNotes** é uma caderneta digital desenvolvida em parceria com o **SENAC**, voltada especialmente aos estudantes do curso de Enfermagem. Seu principal objetivo é oferecer uma plataforma intuitiva para que os alunos registrem anotações durante as aulas e possam acessá-las durante os estágios, com o apoio de Inteligência Artificial (IA) para enriquecer o conteúdo e facilitar o aprendizado. Os professores, por sua vez, têm acesso às anotações dos alunos, incluindo aquelas enriquecidas com informações da IA. Isso permite um acompanhamento eficiente e uma análise criteriosa da qualidade do conteúdo, contribuindo para a formação de profissionais de saúde mais bem preparados.
+O **TrilhaTec** é uma caderneta digital desenvolvida em parceria com o **SENAC**, voltada especialmente aos estudantes do curso de Enfermagem. Seu principal objetivo é oferecer uma plataforma intuitiva para que os alunos registrem anotações durante as aulas e possam acessá-las durante os estágios, com o apoio de Inteligência Artificial (IA) para enriquecer o conteúdo e facilitar o aprendizado. Os professores, por sua vez, têm acesso às anotações dos alunos, incluindo aquelas enriquecidas com informações da IA. Isso permite um acompanhamento eficiente e uma análise criteriosa da qualidade do conteúdo, contribuindo para a formação de profissionais de saúde mais bem preparados.
 
 ---
 
@@ -49,7 +49,7 @@ VÍDEO PARA DEMONSTRAÇÃO
 
 ### Integração Avançada com Inteligência Artificial
 
-O MedNotes integra-se com a API da OpenAI para oferecer análise automática e enriquecimento de conteúdo. Quando um aluno cria uma anotação, a IA analisa o contexto médico e de enfermagem, fornecendo sugestões complementares, esclarecimentos técnicos, referências bibliográficas relevantes e insights didáticos. O sistema também identifica possíveis inconsistências ou informações que necessitam de verificação adicional, alertando tanto alunos quanto professores.
+O TrilhaTec integra-se com a API da OpenAI para oferecer análise automática e enriquecimento de conteúdo. Quando um aluno cria uma anotação, a IA analisa o contexto médico e de enfermagem, fornecendo sugestões complementares, esclarecimentos técnicos, referências bibliográficas relevantes e insights didáticos. O sistema também identifica possíveis inconsistências ou informações que necessitam de verificação adicional, alertando tanto alunos quanto professores.
 
 VÍDEO PARA DEMONSTRAÇÃO
 
@@ -121,7 +121,7 @@ Comunicação segura com API da OpenAI através de endpoints protegidos. Sistema
 
 ## 📱 Responsividade e Acessibilidade
 
-O MedNotes foi desenvolvido seguindo princípios de design responsivo, garantindo experiência otimizada em dispositivos móveis, tablets e desktops. A interface adapta-se automaticamente a diferentes tamanhos de tela, mantendo usabilidade e funcionalidade completas.
+O TrilhaTec foi desenvolvido seguindo princípios de design responsivo, garantindo experiência otimizada em dispositivos móveis, tablets e desktops. A interface adapta-se automaticamente a diferentes tamanhos de tela, mantendo usabilidade e funcionalidade completas.
 
 ---
 
@@ -193,7 +193,7 @@ A parceria com o SENAC garante que o projeto atenda às necessidades reais dos e
 
 ## Impacto Educacional Esperado
 
-O MedNotes representa uma evolução significativa na forma como estudantes de enfermagem organizam e acessam informações durante sua formação. A integração de inteligência artificial não substitui o conhecimento e experiência dos professores, mas sim complementa o processo de aprendizagem, oferecendo recursos adicionais que enriquecem a experiência educacional.
+O TrilhaTec representa uma evolução significativa na forma como estudantes de enfermagem organizam e acessam informações durante sua formação. A integração de inteligência artificial não substitui o conhecimento e experiência dos professores, mas sim complementa o processo de aprendizagem, oferecendo recursos adicionais que enriquecem a experiência educacional.
 
 A plataforma promove maior engajamento dos alunos com o conteúdo, facilita a identificação precoce de dificuldades de aprendizagem, melhora a qualidade das anotações através de sugestões inteligentes, e cria um ambiente colaborativo que fortalece a comunidade acadêmica. Professores se beneficiam de insights valiosos sobre o progresso de seus alunos, permitindo intervenções pedagógicas mais precisas e efetivas.
 
