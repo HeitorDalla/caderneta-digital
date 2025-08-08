@@ -1,12 +1,12 @@
 # TrilhaTec
 
-O **TrilhaTec** é uma caderneta digital desenvolvida em parceria com o **SENAC**, voltada especialmente aos estudantes do curso de Enfermagem. Seu principal objetivo é oferecer uma plataforma intuitiva para que os alunos registrem anotações durante as aulas e possam acessá-las durante os estágios, com o apoio de Inteligência Artificial (IA) para enriquecer o conteúdo e facilitar o aprendizado. Os professores, por sua vez, têm acesso às anotações dos alunos, incluindo aquelas enriquecidas com informações da IA. Isso permite um acompanhamento eficiente e uma análise criteriosa da qualidade do conteúdo, contribuindo para a formação de profissionais de saúde mais bem preparados.
+O **TrilhaTec** é uma caderneta digital desenvolvida em parceria com o **SENAC**, voltada especialmente aos estudantes do curso de Enfermagem. Seu principal objetivo é oferecer uma plataforma intuitiva para que os alunos registrem anotações durante as aulas e possam acessá-las durante os estágios. Os professores, por sua vez, têm acesso às anotações dos alunos, incluindo aquelas enriquecidas com informações da IA. Isso permite um acompanhamento eficiente e uma análise criteriosa da qualidade do conteúdo, contribuindo para a formação de profissionais de saúde mais bem preparados.
 
 ---
 
 ## Objetivo
 
-A principal proposta foi criar uma solução digital que centralize o processo de anotações acadêmicas, transformando práticas tradicionais de registros em papel ou arquivos desorganizados em uma aplicação funcional, fácil de usar e que integre recursos de inteligência artificial. O projeto visa facilitar o registro e a organização de anotações pelos alunos, integrar recursos de IA para fornecer sugestões e informações adicionais relevantes, permitir que os professores acompanhem as anotações dos alunos garantindo a qualidade e veracidade das informações, e oferecer uma interface amigável e responsiva, acessível em diversos dispositivos.
+A principal proposta foi criar uma solução digital que centralize o processo de anotações acadêmicas, transformando práticas tradicionais de registros em papel ou arquivos desorganizados em uma aplicação funcional. O projeto visa facilitar o registro e a organização de anotações pelos alunos, integrar recursos de IA para fornecer sugestões e informações adicionais relevantes, permitir que os professores acompanhem as anotações dos alunos garantindo a qualidade e veracidade das informações, e oferecer uma interface amigável e responsiva, acessível em diversos dispositivos.
 
 ---
 
@@ -44,12 +44,6 @@ VÍDEO PARA DEMONSTRAÇÃO
 ### Caderneta Digital Inteligente
 
 A funcionalidade principal permite aos alunos criar, editar e organizar anotações de forma intuitiva. Cada anotação possui título, conteúdo detalhado, data de criação e modificação, além de categorias personalizáveis. O sistema oferece busca avançada por palavras-chave e organização cronológica automática. As anotações são sincronizadas em tempo real com o banco de dados, garantindo que não haja perda de informações.
-
-VÍDEO PARA DEMONSTRAÇÃO
-
-### Integração Avançada com Inteligência Artificial
-
-O TrilhaTec integra-se com a API da OpenAI para oferecer análise automática e enriquecimento de conteúdo. Quando um aluno cria uma anotação, a IA analisa o contexto médico e de enfermagem, fornecendo sugestões complementares, esclarecimentos técnicos, referências bibliográficas relevantes e insights didáticos. O sistema também identifica possíveis inconsistências ou informações que necessitam de verificação adicional, alertando tanto alunos quanto professores.
 
 VÍDEO PARA DEMONSTRAÇÃO
 
@@ -192,8 +186,6 @@ A parceria com o SENAC garante que o projeto atenda às necessidades reais dos e
 ---
 
 ## Impacto Educacional Esperado
-
-O TrilhaTec representa uma evolução significativa na forma como estudantes de enfermagem organizam e acessam informações durante sua formação. A integração de inteligência artificial não substitui o conhecimento e experiência dos professores, mas sim complementa o processo de aprendizagem, oferecendo recursos adicionais que enriquecem a experiência educacional.
 
 A plataforma promove maior engajamento dos alunos com o conteúdo, facilita a identificação precoce de dificuldades de aprendizagem, melhora a qualidade das anotações através de sugestões inteligentes, e cria um ambiente colaborativo que fortalece a comunidade acadêmica. Professores se beneficiam de insights valiosos sobre o progresso de seus alunos, permitindo intervenções pedagógicas mais precisas e efetivas.
 
