@@ -36,11 +36,6 @@ O sistema implementa um robusto mecanismo de login com três níveis de acesso d
 
 VÍDEO PARA DEMONSTRAÇÃO
 
-**Credenciais de Acesso:**
-- **Aluno**: aluno@exemplo.com / senha123
-- **Professor**: professor@exemplo.com / senha123
-- **Administrador**: admin@exemplo.com / admin123
-
 ### Caderneta Digital Inteligente
 
 A funcionalidade principal permite aos alunos criar, editar e organizar anotações de forma intuitiva. Cada anotação possui título, conteúdo detalhado, data de criação e modificação, além de categorias personalizáveis. O sistema oferece busca avançada por palavras-chave e organização cronológica automática. As anotações são sincronizadas em tempo real com o banco de dados, garantindo que não haja perda de informações.
